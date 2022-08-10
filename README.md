@@ -1,5 +1,5 @@
 ## lotide
-This is a copy of lodash, but much simpler and smaller. This is mostly for practice.
+This is a copy of lodash, but much simpler and smaller. This is mostly for practice implemeting these types of fucntions.
 
 ### Current Contents
 | function | description|
