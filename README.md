@@ -11,3 +11,4 @@ This is a copy of lodash, but much simpler and smaller. This is mostly for pract
 | *assertArraysEqual* | prints to the console whether the two given arrays are exactly equal |
 | *without* | returns a new array that is a subset of a given array, with given elements removed |
 | *flatten* | returns an array that is the single-level version of the given nested array |
+| *middle* | returns the middle of the given array - returns an empty array for arrays with length 2 or less. Returns the middle 2 values if the length is even, and returns the one middle value if the length is odd |
