@@ -13,9 +13,6 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(input) {
   let counts = {};
-
-  console.log(typeof input);
-
   if ((typeof input) === "string") {
     for (const letter of input) {
       if (letter.toUpperCase() !== letter.toLowerCase()) {
