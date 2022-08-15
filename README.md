@@ -17,3 +17,4 @@ This is a copy of lodash, but much simpler and smaller. This is mostly for pract
 | *countOnly* | returns an object containing the counts of the keys in itemsToCount in given array allItems |
 | *countLetters* | returns an object containing the count of how many times each letter that occurs in the given string |
 | *letterPosition* | returns an object that contains the positions where each letter in the given string appears |
+| *findKeyByValue* | returns the key of the given object that corresponds with the given value |
