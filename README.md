@@ -16,3 +16,4 @@ This is a copy of lodash, but much simpler and smaller. This is mostly for pract
 | *middle* | returns the middle of the given array - returns an empty array for arrays with length 2 or less. Returns the middle 2 values if the length is even, and returns the one middle value if the length is odd |
 | *countOnly* | returns an object containing the counts of the keys in itemsToCount in given array allItems |
 | *countLetters* | returns an object containing the count of how many times each letter that occurs in the given string |
+| *letterPosition* | returns an object that contains the positions where each letter in the given string appears |
