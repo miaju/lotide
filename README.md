@@ -1,7 +1,9 @@
-## lotide
+# lotide
+
 This is a copy of lodash, but much simpler and smaller. This is mostly for practice implemeting these types of fucntions.
 
-### Current Contents
+## Current Contents
+
 | function | description|
 | -------- |  --------- |
 | *assertEqual* | prints to the console whether the two given variables are equal in a plain, easy to read way |
