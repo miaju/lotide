@@ -18,10 +18,12 @@ const countLetters = function(input) {
 
   if ((typeof input) === "string") {
     for (const letter of input) {
-      if (counts[letter]) {
-        counts[letter]++;
-      } else {
-        counts[letter] = 1;
+      if (letter.toUpperCase() !== letter.toLowerCase()) {
+        if (counts[letter]) {
+          counts[letter]++;
+        } else {
+          counts[letter] = 1;
+        }
       }
     }
   }
@@ -36,7 +38,7 @@ let result3 = countLetters(123456);
 let result4 = countLetters("this is a sentence for the test!!@#$%?><{}");
 
 
-let expected1 = {t: 4, h: 2, i: 2, s: 4, a: 1, e: 4, n: 2, c: 1, f: 1, o: 1, r: 1};
+let expected1 = {t: 5, h: 2, i: 2, s: 4, a: 1, e: 5, n: 2, c: 1, f: 1, o: 1, r: 1};
 let expected2 = {};
 
 
