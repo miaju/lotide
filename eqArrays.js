@@ -13,8 +13,9 @@ const assertEqual = function(actual, expected) {
 const eqArrays = function(arr1, arr2) {
 
   let result = true;
-  
-  if (arr1.length !== arr2.length) {
+  if ((arr1 === undefined) || (arr2 === undefined)) {
+    return false;
+  } else if (arr1.length !== arr2.length) {
     return false;
   }
   while (result) {
