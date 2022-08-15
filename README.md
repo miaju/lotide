@@ -19,4 +19,4 @@ This is a copy of lodash, but much simpler and smaller. This is mostly for pract
 | *letterPosition* | returns an object that contains the positions where each letter in the given string appears |
 | *findKeyByValue* | returns the key of the given object that corresponds with the given value |
 | *eqObjects* | returns whether the given two objects are exactly equal |
-
+| *assertObjectsEqual* | prints out whether the 2 given object are exactly equal |
