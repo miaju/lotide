@@ -41,15 +41,21 @@ const eqObjects = function(ob1, ob2) {
   if (keys1.length !== keys2.length) {
     return false;
   } else {
-    while (equal) {
-      for (const key of keys1) {
+  
+    for (const key of keys1) {
+      while (equal) {
         if (Array.isArray(ob1[key])) {
           equal = eqArrays(ob1[key], ob2[key]);
-          
+
+        } else if (typeof ob1[key] === 'object') {
+          equal = eqObjects(ob1[key], ob2[key]);
+
         } else if (ob1[key] !== ob2[key]) {
           equal = false;
-        }
-      } break;
+
+        } break;
+      }
+      
     }
   }
   return equal;
@@ -98,6 +104,63 @@ const und2 = {
   1: undefined
 };
 
+const gh = {
+  g: {
+    id: 'g',
+    position: 7
+  },
+
+  h: {
+    id: "h",
+    position: 8
+  }
+};
+
+const hg = {
+  h: {
+    id: "h",
+    position: 8
+  },
+  g: {
+    id: 'g',
+    position: 7
+  }
+};
+
+const gh2 = {
+  g: "g",
+  h: {
+    id: "h",
+    position: 8
+  }
+};
+
+const long = {
+  a: {
+    b: {
+      c: "c"
+    }
+  },
+  d: {
+    e: {
+      f: 'f'
+    }
+  }
+};
+
+const long2 = {
+  a: {
+    b: {
+      c: "c"
+    }
+  },
+  d: {
+    e: {
+      f: 'h'
+    }
+  }
+};
+
 let expected = false;
 let actual = eqObjects(ab, abc);
 assertEqual(actual, expected);
@@ -120,4 +183,20 @@ assertEqual(actual, expected);
 
 expected = true;
 actual = eqObjects(und, und2);
+assertEqual(actual, expected);
+
+expected  = true;
+actual = eqObjects(gh, hg);
+assertEqual(actual, expected);
+
+expected = false;
+actual = eqObjects(gh, gh2);
+assertEqual(actual, expected);
+
+expected = false;
+actual = eqObjects(gh2, gh);
+assertEqual(actual, expected);
+
+expected = false;
+actual = eqObjects(long, long2);
 assertEqual(actual, expected);
