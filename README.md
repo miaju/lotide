@@ -21,3 +21,4 @@ This is a copy of lodash, but much simpler and smaller. This is mostly for pract
 | *eqObjects* | returns whether the given two objects are exactly equal |
 | *assertObjectsEqual* | prints out whether the 2 given object are exactly equal |
 | *map* | returns new array that contains all the items in the given array modified by the given callback function |
+| *takeUntil* | returns an array that is a copy of the given array up to the point where the item in the given array returns a 'truthy' value from the callback function |
