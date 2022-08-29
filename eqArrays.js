@@ -32,6 +32,8 @@ const eqArrays = function(arr1, arr2) {
 
 };
 
+module.exports = eqArrays;
+
 const arr2 = [];
 const arr3 = ["a"];
 const arr4 = ["This", "Is", "hard", "to", "come", "up", "with", "random", "arrays"];

@@ -8,3 +8,4 @@ const arr3 = ["a"];
 assertEqual(head(arr1), "a");
 assertEqual(head(arr2), undefined);
 assertEqual(head(arr3), "a");
+
