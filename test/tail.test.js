@@ -1,4 +1,4 @@
-const assertEqual = require('../assertEqual');
+const expect = require("chai").expect;
 const tail = require("../tail");
 const eqArrays = require("../eqArrays");
 
@@ -6,10 +6,18 @@ const arr1 = ["a","b","c"];
 const arr2 = [];
 const arr3 = ["a"];
 const arr4 = ["This", "Is", "hard", "to", "come", "up", "with", "random", "arrays"];
-const arr5 = [1, 2, 3, 4];
 
-assertEqual(eqArrays(tail(arr1), ["b", "c"]), true);
-assertEqual(eqArrays(tail(arr2), []), true);
-assertEqual(eqArrays(tail(arr3), []), true);
-assertEqual(eqArrays(tail(arr4),  ["Is", "hard", "to", "come", "up", "with", "random", "arrays"]), true);
-assertEqual(eqArrays(tail(arr5),  [2, 3, 4]), true);
+describe("testing tail", () => {
+  it('returns array with last 2 elements of a 3 element array', () => {
+    expect(eqArrays(tail(arr1), ["b", "c"])).to.be.true;
+  });
+  it("returns an empty array when given an empty array", () => {
+    expect(eqArrays(tail(arr2), [])).to.be.true;
+  });
+  it("returns an empty array for given array of 1 element", () => {
+    expect(eqArrays(tail(arr3), [])).to.be.true;
+  });
+  it("returns array with all but the  zeroth element of a 9 element array", () => {
+    expect(eqArrays(tail(arr4),  ["Is", "hard", "to", "come", "up", "with", "random", "arrays"])).to.be.true;
+  });
+});
