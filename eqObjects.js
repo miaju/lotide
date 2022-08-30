@@ -61,7 +61,7 @@ const eqObjects = function(ob1, ob2) {
   return equal;
 };
 
-
+module.exports = eqObjects;
 
 const ab = {
   a: "1",
