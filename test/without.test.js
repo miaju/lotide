@@ -32,33 +32,3 @@ describe("testing without", () => {
     expect(eqArrays(expected, actual)).to.be.true;
   });
 });
-
-
-
-/*
-let expected;
-let actual;
-
-
-expected = [2, 3];
-actual = without([1, 2, 3], [1]);
-eqArrays(expected, actual);
-
-expected = ["1", "2"];
-actual = without(["1", "2", "3"], [1, 2, "3"]);
-eqArrays(expected, actual);
-eqArrays(actual, actual);
-
-expected = ["hummus", 1];
-actual = without(["hummus", 1, ""], ["", "h"]);
-eqArrays(expected, actual);
-
-
-expected = [1, 3];
-actual = without([1, 2, 2, 2, 2, 6, 7, 3], [2, 7, 6]);
-eqArrays(expected, actual);
-
-expected = [];
-actual = without([1], [1]);
-eqArrays(expected, actual);
-*/
