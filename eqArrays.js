@@ -10,7 +10,9 @@ const eqArrays = function(arr1, arr2) {
   }
   while (result) {
     for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
+      if (Array.isArray(arr1[i])) {
+        result = eqArrays(arr1[i], arr2[i]);
+      } else if (arr1[i] !== arr2[i]) {
         result = false;
       }
     }
