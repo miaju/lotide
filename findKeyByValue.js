@@ -24,6 +24,7 @@ const findKeyByValue = function(lookIn, toFind) {
   return result;
 
 };
+module.exports = findKeyByValue;
 
 const alphabet = {
   1: "a",

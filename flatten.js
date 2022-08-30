@@ -39,6 +39,7 @@ const flatten = function(arr, result = []) {
   } return result;
 };
 
+module.exports = flatten;
 
 
 let expected = [1, 2, 3, 4, 5];

@@ -19,7 +19,7 @@ const findKey = function(ob, cb) {
   }
 };
 
-
+module.exports = findKey;
 
 const result1 = findKey({
   "Blue Hill": { stars: 1 },

@@ -28,7 +28,7 @@ const countLetters = function(input) {
   return counts;
 };
 
-
+module.exports = countLetters;
 
 let result1 = countLetters("this is a sentence for the test");
 let result2 = countLetters("");

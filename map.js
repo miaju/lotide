@@ -40,6 +40,8 @@ const map = function(array, callback) {
   return results;
 };
 
+module.exports = map;
+
 const words = ["beans", "fjord", "cable", "dictionary", "elephant"];
 const mixed = [1, 'pie', 3.6, true, [1, 20]];
 

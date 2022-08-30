@@ -51,7 +51,7 @@ const letterPositions = function(sentence) {
   return result;
 
 };
-
+module.exports = letterPositions;
 
 let expected = {h: [0], e: [1], l: [2, 3], 0: [4]};
 let result = letterPositions('hello');

@@ -48,6 +48,8 @@ const without = function(original, toRemove) {
   return result;
 };
 
+module.exports = without;
+
 let expected;
 let actual;
 
