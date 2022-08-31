@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@miaju/lotide",
   "version": "1.0.0",
-  "description": "This is a copy of lodash, but much simpler and smaller. This is mostly for practice implemeting these types of functions.",
-  "main": "assertArraysEqual.js",
+  "description": "A mini clone of the Lodash library, created as a part of learnings at Lighthouse Labs.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/miaju/lotide.git"
   },
-  "author": "",
+  "author": "Mia Tanner",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/miaju/lotide/issues"
