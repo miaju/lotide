@@ -1,4 +1,4 @@
-const eqObjects = require("../eqObjects");
+const _ = require("../index");
 const expect = require("chai").expect;
 
 const ab = {
@@ -76,22 +76,22 @@ const long2 = {
 describe("testing eqObjects", () => {
   
   it("should be false if the objects don't have the same number of keys", () => {
-    expect(eqObjects(ab, abc)).to.be.false;
+    expect(_.eqObjects(ab, abc)).to.be.false;
   });
   it("should be true if the objects have the same values for the same keys", () => {
-    expect(eqObjects(ab, ba)).to.be.true;
+    expect(_.eqObjects(ab, ba)).to.be.true;
   });
   it("should work if the values are arrays", () => {
-    expect(eqObjects(cd, cd2)).to.be.false;
+    expect(_.eqObjects(cd, cd2)).to.be.false;
   });
   it("should work even if one or more of the values are objects themselves", () => {
-    expect(eqObjects(gh, gh2)).to.be.false;
+    expect(_.eqObjects(gh, gh2)).to.be.false;
   });
   it("should work on many nested objects being the same", () => {
-    expect(eqObjects(long,long)).to.be.true;
+    expect(_.eqObjects(long,long)).to.be.true;
   });
   it("should work on many nested objects being different", () => {
-    expect(eqObjects(long,long2)).to.be.false;
+    expect(_.eqObjects(long,long2)).to.be.false;
   });
 });
 

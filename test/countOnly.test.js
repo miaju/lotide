@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const countOnly = require("../countOnly");
+const _ = require("../index");
 
 const firstNames = [
   "Karl",
@@ -13,7 +13,7 @@ const firstNames = [
   "Joe"
 ];
 
-const result = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+const result = _.countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
 describe("testing countOnly", () => {
   it("should return object that contains how many times each item occurs in the given array", () => {

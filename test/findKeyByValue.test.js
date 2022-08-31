@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const findKeyByValue = require("../findKeyByValue");
+const _ = require("../index");
 
 const alphabet = {
   1: "a",
@@ -22,13 +22,13 @@ const nums = {
 
 describe("testing findKeyByValue", () => {
   it("should find the key whose value strictly equals the given value", () => {
-    expect(findKeyByValue(nums, "4")).to.equal("5");
+    expect(_.findKeyByValue(nums, "4")).to.equal("5");
   });
   it("should return undefined if the given value doen't appear in the given object", () => {
-    expect(findKeyByValue(alphabet, "m")).to.be.undefined;
+    expect(_.findKeyByValue(alphabet, "m")).to.be.undefined;
   });
   it("should return undefined if the given array is empty", () => {
-    expect(findKeyByValue(empty, "anything")).to.be.undefined;
+    expect(_.findKeyByValue(empty, "anything")).to.be.undefined;
   });
 });
 
